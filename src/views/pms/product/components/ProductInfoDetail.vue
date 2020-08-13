@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 50px">
+  <div class="card-algin-left">
     <el-form :model="value" :rules="rules" ref="productInfoForm" label-width="120px" style="width: 600px" size="small">
       <el-form-item label="商品分类：" prop="productCategoryId">
         <el-cascader

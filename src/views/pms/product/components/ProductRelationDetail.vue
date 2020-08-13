@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 50px">
+  <div class="card-algin-left">
     <el-form :model="value"
              ref="productRelationForm"
              label-width="120px"

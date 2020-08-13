@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 50px">
+  <div class="card-algin-left">
     <el-form :model="value" ref="productSaleForm" label-width="120px" style="width: 600px" size="small">
       <el-form-item label="赠送积分：">
         <el-input v-model="value.giftPoint"></el-input>

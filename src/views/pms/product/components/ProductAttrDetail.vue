@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 50px">
+  <div class="card-algin-left">
     <el-form :model="value" ref="productAttrForm" label-width="120px" style="width: 720px" size="small">
       <el-form-item label="属性类型：">
         <el-select v-model="value.productAttributeCategoryId"

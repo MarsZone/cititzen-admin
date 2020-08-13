@@ -10,11 +10,11 @@ const name = 'Citizen-admin' // page title
 const port = process.env.port || process.env.npm_config_port || 9527; // dev port
 module.exports={
   // project deployment base
-  publicPath: '/citizen/',
+  publicPath: '/citizen-admin/',
 
   // where to output built files
   //输出文件目录
-  outputDir: 'citizen',
+  outputDir: 'citizen-admin',
 
   //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
   assetsDir: 'static',
@@ -28,6 +28,7 @@ module.exports={
   configureWebpack: config => {
     config.name = name;
     config.plugins.push( new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|en-us/),);
+    config.plugins.push(new webpack.DefinePlugin({'process.env': require('./config/dev.env')}));
     if(isProduction){
       config.plugins.push(
         new CompressionWebpackPlugin({
@@ -42,16 +43,7 @@ module.exports={
   devServer: {
      port: port,
      open: false,
-     clientLogLevel: 'warning',
-     autoOpenBrowser: false,
-     errorOverlay: true,
-     notifyOnErrors: true,
      disableHostCheck:true, //解决内网穿透问题
-     historyApiFallback: {
-       rewrites: [
-        { from: /.*/, to: path.posix.join('/', 'index.html') },
-       ],
-     },
      overlay: {
        warnings: false,
        errors: true

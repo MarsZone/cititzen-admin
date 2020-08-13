@@ -7,6 +7,9 @@ import VCharts from "v-charts";
 import router from "./router";
 import store from "./store";
 
+import '@/styles/index.scss' // global css
+import '@/icons' // icon
+import '@/permission' // permission control
 Vue.config.productionTip = false;
 Vue.use(ElementUI, { locale });
 Vue.use(VCharts);

@@ -71,7 +71,7 @@
       :title="dialogTitle"
       :visible.sync="dialogVisible"
       width="30%">
-      <el-form ref="productAttrCatForm":model="productAttrCate" :rules="rules" label-width="120px">
+      <el-form ref="productAttrCatForm" :model="productAttrCate" :rules="rules" label-width="120px">
         <el-form-item label="类型名称" prop="name">
           <el-input v-model="productAttrCate.name" auto-complete="off"></el-input>
         </el-form-item>
