@@ -79,6 +79,8 @@ const permission = {
       return new Promise(resolve => {
         const { menus } = data;
         const { username } = data;
+        //过滤掉不符合权限的菜单
+        console.log(data);
         const accessedRouters = asyncRouterMap.filter(v => {
           //admin帐号直接返回所有菜单
           // if(username==='admin') return true;
